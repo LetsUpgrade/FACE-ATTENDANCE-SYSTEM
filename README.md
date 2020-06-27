@@ -1,2 +1,2 @@
 # FACE-ATTENDANCE-SYSTEM
-An face detector developed to calculate the attendance of a student.
+An face detector developed to mark the attendance of a student.
