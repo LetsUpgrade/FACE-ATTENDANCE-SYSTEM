@@ -1,0 +1,31 @@
+{% extends 'attendence_system/home.html' %}
+
+{% block content %}
+<div class="container">
+
+
+    <div class="row">
+
+
+        <div class="col-md-12" style="margin-top: 20px;;">
+            <div class="card card-body">
+                <center><h3>Record Attendence </h3></center>
+                    <a href="{% url 'record_attn' %}" class="btn btn-block btn-primary">Click Here</a>
+            </div>
+        </div>
+        <div class="col-md-6" style="margin-top: 20px;;">
+            <div class="card card-body">
+                <center><h3>Register</h3></center>
+                    <a href="{% url 'register_user' %}" class="btn btn-block btn-success">Click Here</a>
+            </div>
+        </div>
+        <div class="col-md-6" style="margin-top: 20px;;">
+            <div class="card card-body">
+                <center><h3>View Attendence</h3></center>
+                    <a href="{% url 'attn_records' %}" class="btn btn-block btn-secondary">Click Here</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

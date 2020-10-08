@@ -1,0 +1,42 @@
+{% extends "attendence_system/home.html" %}
+{% block title %}Attendence Management{% endblock %}
+{% block content %}
+
+
+<div class="row">
+	<div class="col-md-1">
+
+	</div>
+	<div class="col-md-10 blockquote text-center shadow bg-white rounded" style="margin-top: 20px;;">
+          <h2>Attendence Management</h2>
+		  <p>Attendence Management System Below</p>
+    </div>
+	<div class="col-md-1">
+
+	</div>
+	<div class="col-md-12">
+
+	</div>
+	<div class="col-md-3">
+		<div class="card card-body">
+			<a class="btn btn-warning" href="{% url 'dashboard' %}"> &#8592; Back to Home</a>
+			<hr>
+			<h3 style="text-align: center">View Attendence</h3>
+			<hr>
+
+		</div>
+	</div>
+
+	<div class="col-md-9">
+		<div class="card card-body">
+			<h3 class="p-3 mb-2 ">
+			  Attendence status of ABC
+				<br>
+				<small class="text-muted">Attendence info Below </small>
+			</h3>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

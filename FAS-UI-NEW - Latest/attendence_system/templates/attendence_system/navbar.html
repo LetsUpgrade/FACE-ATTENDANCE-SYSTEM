@@ -1,0 +1,45 @@
+{% load static %}
+
+
+<style>
+  .hello-msg{
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+<img src="{% static 'images/logo.png' %}" height="50px" width="250px">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+         {% if request.user.is_authenticated %}
+      <li class="nav-item active">
+<!--        <span class="nav-link">Welcome</span>-->
+        <a href="{% url 'dashboard' %}" class="nav-link">Hello {{request.user.username}},</a>
+      </li>
+      <li class="nav-item ">
+        <a href="{% url 'record_attn' %}" class="nav-link">Register Attendence</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="{% url 'register_user' %}">Register Employee</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'attn_records' %}">Attendence Management</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+      </li>
+    {% else %}
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}">Log-in</a>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'register_user' %}">New User</a>
+      </li>
+     </ul>
+       {% endif %}
+  </div>
+</nav>

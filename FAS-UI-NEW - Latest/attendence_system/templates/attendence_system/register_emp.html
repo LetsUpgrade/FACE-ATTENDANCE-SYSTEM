@@ -1,0 +1,75 @@
+{% extends "attendence_system/home.html" %}
+{% block title %}Register Employee{% endblock %}
+{% block content %}
+
+
+<div class="row">
+
+	<div class="col-md-12" style="margin-top: 20px;;">
+		   <h2>Register Employee</h2>
+  			<p>Registration Form Below</p>
+    </div>
+
+	<div class="col-md-3">
+		<div class="card card-body">
+			<a class="btn btn-warning" href="{% url 'dashboard' %}"> &#8592; Back to Home</a>
+			
+			<hr>
+			<h3 style="text-align: center">Register</h3>
+			<hr>
+
+		</div>
+	</div>
+	<div class="col-md-9">
+		<div class="card card-body">
+			<h3 class="p-3 mb-2 ">
+			  New Employee Registration !
+				<br>
+			  <small class="text-muted">Fill the below form</small>
+			</h3>
+			<div>
+				<form   method="post">
+					{% csrf_token %}
+
+					
+				  
+
+				  <label for="first_name">First name:</label><br><br>
+				  <input type="text" id="first_name" name="first_name"><br><br>
+
+				  <label for="last_name">Last name:</label><br><br>
+				  <input type="text" id="last_name" name="last_name"><br><br>
+
+				  <label for="employee_id">Employee Id :</label><br><br>
+				  <input type="text"  name="employee_id"> <br><br>
+				  
+				
+
+				  <label for="email_id">Email ID:</label><br><br>
+				  <input type="text"  name="email_id"><br><br>
+				 
+				  
+				  {% for message in messages %}
+				<h3>{{message}}</h3>
+				{% endfor %}<br><br>
+				<div>
+				
+				  <button type="submit" class="btn btn-primary">Submit</button>
+				  <button type="reset" class="btn btn-primary">Reset</button>
+				  <br><br>
+				</div>
+
+				</form>
+			</div> 
+				
+				
+
+
+			
+			
+				
+	</div>
+</div>
+{% endblock %}
+
+

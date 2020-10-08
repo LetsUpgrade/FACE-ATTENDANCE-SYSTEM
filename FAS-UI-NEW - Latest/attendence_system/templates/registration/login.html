@@ -1,0 +1,43 @@
+{% extends "attendence_system/home.html" %}
+{% block title %}Log-in{% endblock %}
+{% block content %}
+  <div class ="col-md-12"><h1>Log-in</h1></div>
+  {% if form.errors %}
+    <div class ="col-md-12">
+    <p>
+      Your username and password didn't match.
+      Please try again.
+    </p>
+      </div>
+  {% else %}
+<div class ="col-md-12">
+    <p>Please, use the following form to log-in:</p>
+</div>
+  {% endif %}
+  	<div class="col-md-9">
+		<div class="card card-body">
+			<h3 class="p-3 mb-2 ">
+			  Record Attendance for the Day !
+				<br>
+				<small class="text-muted">Look at the CAM</small>
+			</h3>
+			  {% for message in messages %}
+				<h1>{{message}}</h1>
+				{% endfor %}<br><br>
+        <a class="btn btn-primary" href="{% url 'recognize1' %}"> Register Attendance </a>
+		</div>
+    
+	</div>
+  
+  <div class="login-form col-md-12">
+    <form action="{% url 'login' %}" method="post">
+      {{ form.as_p }}
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ next }}" />
+
+      <p><input type="submit" class="btn btn-primary" value="Log-in">          <a class="btn btn-primary" href="{% url 'register_user' %}">  Sign up </a></p>
+      
+    </form>
+  </div>
+  
+{% endblock %}
