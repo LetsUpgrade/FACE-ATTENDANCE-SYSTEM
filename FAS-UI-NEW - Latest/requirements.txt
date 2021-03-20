@@ -49,7 +49,7 @@ ipython @ file:///C:/ci/ipython_1593433781269/work
 ipython-genutils==0.2.0
 itsdangerous==1.1.0
 jedi @ file:///C:/ci/jedi_1596472767194/work
-Jinja2==2.11.2
+Jinja2==2.11.3
 jmespath==0.10.0
 joblib==0.16.0
 jsonschema @ file:///C:/ci/jsonschema_1594363671836/work
