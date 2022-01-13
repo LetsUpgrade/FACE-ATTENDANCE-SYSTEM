@@ -1,5 +1,5 @@
 numpy==1.18.4
-Pillow==7.1.2
+Pillow==9.0.0
 python==3.7.6
 imutils==0.5.3
 opencv==4.4.0
