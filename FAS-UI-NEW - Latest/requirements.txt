@@ -70,7 +70,7 @@ opencv-python==4.3.0.38
 packaging==20.4
 pandas==1.0.5
 pandocfilters==1.4.2
-paramiko==2.7.1
+paramiko==2.10.1
 parso==0.7.0
 patsy==0.5.1
 pickleshare @ file:///C:/ci/pickleshare_1594374056827/work
