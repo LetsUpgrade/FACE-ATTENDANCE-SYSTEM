@@ -51,7 +51,7 @@ itsdangerous==1.1.0
 jedi @ file:///C:/ci/jedi_1596472767194/work
 Jinja2==2.11.2
 jmespath==0.10.0
-joblib==0.16.0
+joblib==1.2.0
 jsonschema @ file:///C:/ci/jsonschema_1594363671836/work
 jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1594826976318/work
 jupyter-core==4.6.3
